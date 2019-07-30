@@ -29,9 +29,9 @@ private:
     //x*sin(theta/2),y*sin(theta/2),z*sin(theta/2),cos(theta/2)
     Eigen::Vector4d qxyz;
     
-    vector<pair<Eigen::Vector3d,Eigen::Vector4d> >ImgPos ;
+    vector<pair<Eigen::Vector3d,Eigen::Vector4d> >vImgPos ;
     
-    std::vector<double> ImgTimestramps;
+    std::vector<double> vImgTimestramps;
     //time,posi
     map<vector<double>,vector<pair<Eigen::Vector3d,Eigen::Vector4d> > > ImgData;
 public:
@@ -47,9 +47,9 @@ private:
     Eigen::Vector3d xyz;
     //unit vector unit_xyz[3]
     Eigen::Vector3d unit_xyz;
-    std::vector<double> MagTimestramps;
+    std::vector<double> vMagTimestramps;
     //time,posi
-    vector<pair<Eigen::Vector3d,Eigen::Vector3d> > MagPos ;
+    vector<pair<Eigen::Vector3d,Eigen::Vector3d> > vMagPos ;
     map<vector<double>,vector<pair<Eigen::Vector3d,Eigen::Vector3d> > > MagData;
 public:
     LoadMagData(const std::string &strMagfilename);

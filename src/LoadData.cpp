@@ -19,7 +19,7 @@ LoadMagData::LoadMagData(const std::string &strMagFile)
         ss  << s;
         double t;
         ss >> t;
-        MagTimestramps.push_back(t);
+        vMagTimestramps.push_back(t);
         double x,y,z,ux,uy,uz;
         ss >> x;
         ss >> y;
@@ -33,7 +33,7 @@ LoadMagData::LoadMagData(const std::string &strMagFile)
         unit_xyz[0] = ux;
         unit_xyz[1] = uy;
         unit_xyz[2] = uz; 
-        MagPos.push_back(make_pair(xyz,unit_xyz));     
+        vMagPos.push_back(make_pair(xyz,unit_xyz));     
 
     }
 }
@@ -51,7 +51,7 @@ LoadImgData::LoadImgData(const std::string &strImgfile)
         ss  << s;
         double t;
         ss >> t;
-        ImgTimestramps.push_back(t);
+        vImgTimestramps.push_back(t);
         double x,y,z,qx,qy,qz,theta;
         ss >> x;
         ss >> y;
@@ -67,7 +67,7 @@ LoadImgData::LoadImgData(const std::string &strImgfile)
         qxyz[1] = qy;
         qxyz[2] = qz; 
         qxyz[3] = theta;
-        ImgPos.push_back(make_pair(xyz,qxyz));     
+        vImgPos.push_back(make_pair(xyz,qxyz));     
 
     }
 }
